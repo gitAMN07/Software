@@ -1,0 +1,6 @@
+digraph B { rankdir=LR; node[shape=box,style="rounded,filled",fontname="Helvetica",fontsize=11,fillcolor="#fdecec"]; edge[fontname="Helvetica",fontsize=9];
+label="BEFORE (Assignment #03)"; labelloc=t; fontname="Helvetica-Bold";
+subgraph cluster_py{label="Python";style=dashed; py[label="booking.py\ncan_book(start,end,now,blocked,existing)\nAC1-AC4 rules\n(single room, bool only)"]; t[label="test_booking.py\n22 tests",fillcolor="#eef3fb"];}
+subgraph cluster_web{label="Bolt web prototype";style=dashed; app[label="src/App.tsx (364 lines)\n- fictional data (1 room)\n- toMinutes() parsing\n- overlaps() + evaluateRequest()\n  AC1-AC4 rules AGAIN\n- ResultPanel UI"];}
+t->py[label="tests"]; py->app[style=dotted,dir=none,label="same rules,\ntwo copies"];
+}

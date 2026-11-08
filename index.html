@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Campus Room Availability Checker</title>
+<link rel="stylesheet" href="src/ui/styles.css">
+</head>
+<body>
+<header><h1>Smart Campus Room Availability</h1><p>Current time: <strong id="now"></strong> &middot; fictional data</p></header>
+<main>
+  <section class="card" id="filters">
+    <h2>1. Requirements</h2>
+    <label>Attendees <input id="attendees" type="number" min="1" value="1" inputmode="numeric"></label>
+    <fieldset><legend>Required equipment</legend><div id="equipment" class="chips"></div></fieldset>
+  </section>
+  <section class="card">
+    <h2>2. Choose a room <span id="count" class="muted"></span></h2>
+    <div id="rooms" class="rooms"></div>
+  </section>
+  <section class="card" id="times">
+    <h2>3. Check time &mdash; <span id="room-title"></span></h2>
+    <div class="row">
+      <label>Start <input id="start" placeholder="HH:MM" inputmode="numeric"></label>
+      <label>End <input id="end" placeholder="HH:MM" inputmode="numeric"></label>
+    </div>
+    <p class="muted">Existing bookings:</p><ul id="bookings" class="bookings"></ul>
+    <div id="result" aria-live="polite"></div>
+  </section>
+</main>
+<script type="module" src="src/ui/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+$ python3 -m unittest -v test_booking
+test_121_rejected (test_booking.TestCanBook.test_121_rejected) ... ok
+test_between_two_bookings_available (test_booking.TestCanBook.test_between_two_bookings_available) ... ok
+test_blocked_room_rejected (test_booking.TestCanBook.test_blocked_room_rejected) ... ok
+test_contains_booking_rejected (test_booking.TestCanBook.test_contains_booking_rejected) ... ok
+test_empty_bookings_available (test_booking.TestCanBook.test_empty_bookings_available) ... ok
+test_end_after_1440_rejected (test_booking.TestCanBook.test_end_after_1440_rejected) ... ok
+test_end_of_day_1440_allowed (test_booking.TestCanBook.test_end_of_day_1440_allowed) ... ok
+test_exactly_120_allowed (test_booking.TestCanBook.test_exactly_120_allowed) ... ok
+test_existing_not_mutated (test_booking.TestCanBook.test_existing_not_mutated) ... ok
+test_inside_booking_rejected (test_booking.TestCanBook.test_inside_booking_rejected) ... ok
+test_negative_start_rejected (test_booking.TestCanBook.test_negative_start_rejected) ... ok
+test_non_integer_minutes_rejected (test_booking.TestCanBook.test_non_integer_minutes_rejected) ... ok
+test_overlap_rejected (test_booking.TestCanBook.test_overlap_rejected) ... ok
+test_overlap_second_booking (test_booking.TestCanBook.test_overlap_second_booking) ... ok
+test_returns_strict_bool (test_booking.TestCanBook.test_returns_strict_bool) ... ok
+test_reversed_rejected (test_booking.TestCanBook.test_reversed_rejected) ... ok
+test_start_before_now_rejected (test_booking.TestCanBook.test_start_before_now_rejected) ... ok
+test_starts_now_rejected (test_booking.TestCanBook.test_starts_now_rejected) ... ok
+test_starts_one_minute_after_now (test_booking.TestCanBook.test_starts_one_minute_after_now) ... ok
+test_touch_start_available (test_booking.TestCanBook.test_touch_start_available) ... ok
+test_touching_end_available (test_booking.TestCanBook.test_touching_end_available) ... ok
+test_zero_length_rejected (test_booking.TestCanBook.test_zero_length_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
+
+$ BOOKING_MODULE=booking_v1 python3 -m unittest test_booking
+    self.assertIs(can_book(660.5, 720, NOW, False, EXISTING), False)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not False
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+FAILED (failures=1)

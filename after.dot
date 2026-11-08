@@ -1,0 +1,13 @@
+digraph A { rankdir=TB; node[shape=box,style="rounded,filled",fontname="Helvetica",fontsize=11,fillcolor="#e6f6ec"]; edge[fontname="Helvetica",fontsize=9];
+label="AFTER (Assignment #04)"; labelloc=t; fontname="Helvetica-Bold";
+html[label="index.html + ui/styles.css\nlayout, responsive CSS",fillcolor="#eef3fb"];
+app[label="ui/app.js (controller)\nstate, events, F5 refresh",fillcolor="#eef3fb"];
+view[label="ui/view.js (presentation)\nroom list, empty state (F4),\nresult + reasons (AC5/AC6)",fillcolor="#eef3fb"];
+data[label="data/rooms.js\nROOMS (5, deep-frozen), EQUIPMENT, NOW\nfindRoom()",fillcolor="#fff7e0"];
+filt[label="domain/filtering.js\nfilterRooms() F1+F2\nreconcileSelection() F5"];
+avail[label="domain/availability.js\ncheckAvailability() AC1-AC4, F3\noverlaps(), canBook() (A3 contract)"];
+time[label="domain/time.js\nparseHHMM(), formatHHMM(), DAY_END"];
+tests[label="tests/*.test.mjs\n39 unit/regression + 4 UI (Playwright)",fillcolor="#f0f0f0"];
+html->app; app->view; app->data; app->filt; app->avail; app->time; avail->time; view->time;
+tests->avail; tests->filt; tests->data; tests->html[style=dashed,label="browser"];
+}

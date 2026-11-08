@@ -1,0 +1,16 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#f4f6fa;color:#1b2430}
+header{background:#1f3a68;color:#fff;padding:16px 20px}header h1{margin:0;font-size:1.3rem}header p{margin:4px 0 0;opacity:.85}
+main{display:grid;gap:16px;padding:16px;max-width:1100px;margin:auto;grid-template-columns:1fr}
+@media(min-width:800px){main{grid-template-columns:1fr 1.2fr 1.2fr}}
+.card{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+h2{font-size:1rem;margin:0 0 12px}.muted{color:#667;font-weight:400;font-size:.85rem}
+label{display:block;margin-bottom:8px}input[type=number],#start,#end{width:100%;padding:8px;font-size:1rem;border:1px solid #c5ccd8;border-radius:6px;margin-top:4px}
+fieldset{border:0;padding:0;margin:8px 0 0}legend{margin-bottom:6px}.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;gap:4px;align-items:center;border:1px solid #c5ccd8;border-radius:16px;padding:4px 10px;margin:0;font-size:.9rem}
+.rooms{display:grid;gap:8px}.room{border:1px solid #d6dbe4;border-radius:8px;padding:10px;cursor:pointer;margin:0}
+.room.selected{border-color:#1f3a68;background:#eef3fb}.room.blocked{opacity:.8}
+.room-name{font-weight:600}.room-meta{display:block;font-size:.85rem;color:#556;margin-top:2px}
+.badge{background:#b42318;color:#fff;border-radius:4px;font-size:.75rem;padding:1px 6px;margin-left:6px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.bookings{margin:4px 0 12px;padding-left:18px}
+.result{border-radius:8px;padding:12px}.result.ok{background:#e6f6ec;color:#11672f}.result.bad{background:#fdecec;color:#8a1c1c}
+.reasons{margin:6px 0 0;padding-left:18px}.hint{color:#556}.empty{background:#fff7e0;border-radius:8px;padding:12px;color:#7a5a00;margin:0}

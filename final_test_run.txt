@@ -1,0 +1,53 @@
+$ npm test   ->  node --test "tests/*.test.mjs"
+# run: 2026-11-08 20:39 Asia/Almaty, Node v22.23.4
+✔ F1: exact capacity matches (12 attendees -> A-101 cap 12 included) (0.920687ms)
+✔ F1: insufficient capacity excluded (13 attendees -> A-101 excluded) (1.254171ms)
+✔ F2: room must contain ALL selected equipment (1.746059ms)
+✔ F1+F2 combined (0.145053ms)
+✔ F3: blocked rooms remain listed (shown with a Blocked badge) when they match (0.093305ms)
+✔ F4: no match returns an empty list (UI shows empty state) (0.095525ms)
+✔ F5: selection kept if still visible, cleared if filtered out (0.174859ms)
+✔ filtering does not mutate the catalog; invalid attendees default to 1 (0.128713ms)
+✔ regression: AC4 touching end available (0.908746ms)
+✔ regression: AC4 overlap rejected (0.170749ms)
+✔ regression: AC3 blocked room rejected (0.070894ms)
+✔ regression: AC2 exactly 120 allowed (0.065495ms)
+✔ regression: AC2 121 rejected (0.070492ms)
+✔ regression: AC1 starts now rejected (0.06218ms)
+✔ regression: AC1 reversed rejected (0.128356ms)
+✔ regression: AC1 zero length rejected (0.071033ms)
+✔ regression: AC1 end 1440 allowed (0.2314ms)
+✔ regression: AC1 end 1441 rejected (0.294013ms)
+✔ regression: AC1 negative start rejected (0.090218ms)
+✔ regression: AC4 between two bookings (0.049473ms)
+✔ regression: AC4 overlap second booking (0.07952ms)
+✔ regression: AC4 touch start available (0.041133ms)
+✔ regression: AC4 contains booking (0.038341ms)
+✔ regression: AC4 inside booking (0.03171ms)
+✔ regression: AC4 empty bookings (0.029814ms)
+✔ regression: AC1 one minute after now (0.028646ms)
+✔ regression: AC1 start before now (0.032793ms)
+✔ regression: AC5 returns strict boolean (1.17505ms)
+✔ regression: AC5 existing bookings not mutated (0.127864ms)
+✔ regression: AC1 non-integer minutes rejected (0.069216ms)
+✔ catalog: at least four rooms with id, name, capacity, equipment, blocked, bookings (1.72777ms)
+✔ catalog: data is immutable (AC5) (0.376163ms)
+✔ uses the chosen room bookings, not another room (11:00-12:00) (1.268075ms)
+✔ boundary: exactly 120 min available, 121 min rejected (0.140267ms)
+✔ boundary: touching interval available, overlapping by 1 minute rejected (0.161764ms)
+✔ F3: blocked room is never reported available, even for a free slot (0.154923ms)
+✔ AC6: every rejection carries a readable reason; multiple reasons are all listed (0.196053ms)
+✔ no room selected -> unavailable with NO_ROOM reason (0.147656ms)
+✔ time parsing: 24:00 allowed only as end (fixes A3 issue #3) (0.379999ms)
+✔ UI: filter -> select room -> check -> switch room refreshes result (F1, F2, F5, AC4) (787.542463ms)
+✔ UI: selected room filtered out -> selection cleared; no match -> empty state (F4, F5) (37.143023ms)
+✔ UI: blocked room shows Blocked badge and Unavailable (F3) (231.278008ms)
+✔ UI: mobile width 360px has no horizontal scroll (AC6) (126.644333ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1928.631953
